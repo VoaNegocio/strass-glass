@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, MessageCircle, ArrowDown } from 'lucide-react';
+import { WHATSAPP_NUMBER } from '../constants';
 
 const Hero = () => {
     const handleWhatsAppClick = () => {
-        window.open('https://wa.me/5544999999999?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+um+or%C3%A7amento+para+obra+comercial.', '_blank');
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+um+or%C3%A7amento+para+obra+comercial.`, '_blank');
     };
 
     return (

@@ -1,9 +1,11 @@
 import React from 'react';
-import { ArrowRight, MessageCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { MessageCircle, ArrowRight, ShieldCheck } from 'lucide-react';
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from '../constants';
 
 const CTAFinal = () => {
     const handleWhatsAppClick = () => {
-        window.open('https://wa.me/5544999999999?text=Ol%C3%A1%2C+cheguei+ao+final+da+p%C3%A1gina+e+estou+interessado+em+fechar+um+projeto+com+a+Strass+Glass.', '_blank');
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank');
     };
 
     return (

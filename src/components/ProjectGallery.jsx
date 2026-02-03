@@ -1,6 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { MessageCircle, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MessageCircle, ArrowRight, X } from 'lucide-react';
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from '../constants';
 
 const projects = [
     {
@@ -69,6 +70,8 @@ const projects = [
 ];
 
 const ProjectGallery = () => {
+    const [selectedProject, setSelectedProject] = useState(null);
+
     return (
         <section className="py-24 bg-strass-blue relative overflow-hidden">
             {/* Background Gradient */}
@@ -97,13 +100,16 @@ const ProjectGallery = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer"
+                            onClick={() => setSelectedProject(project)}
+                            layoutId={`project-${project.id}`}
                         >
                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
 
-                            <img
+                            <motion.img
                                 src={project.image}
                                 alt={project.title}
                                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                layoutId={`image-${project.id}`}
                             />
 
                             <div className="absolute bottom-0 left-0 p-8 z-20 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
@@ -121,7 +127,7 @@ const ProjectGallery = () => {
 
                 <div className="mt-16 text-center">
                     <button
-                        onClick={() => window.open('https://wa.me/5544999999999?text=Ol%C3%A1%2C+vi+a+galeria+de+projetos+e+gostaria+de+conhecer+mais+sobre+as+fachadas+e+esquadrias.', '_blank')}
+                        onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank')}
                         className="group inline-flex items-center gap-3 bg-[linear-gradient(110deg,#16a34a,45%,#22c55e,55%,#16a34a)] bg-[length:200%_100%] animate-shimmer-pulse text-white px-8 py-4 rounded-lg font-bold transition-all hover:shadow-green-500/30 transform hover:-translate-y-1"
                     >
                         <MessageCircle className="w-5 h-5" />
@@ -130,6 +136,90 @@ const ProjectGallery = () => {
                     </button>
                 </div>
             </div>
+
+            {/* Modal Overlay */}
+            <AnimatePresence>
+                {selectedProject && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 md:p-8"
+                        onClick={() => setSelectedProject(null)}
+                    >
+                        <motion.div
+                            className="relative max-w-5xl w-full bg-strass-blue/50 rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
+                            onClick={(e) => e.stopPropagation()}
+                            layoutId={`project-${selectedProject.id}`}
+                        >
+                            <button
+                                className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
+                                onClick={() => setSelectedProject(null)}
+                            >
+                                <X className="w-6 h-6" />
+                            </button>
+
+                            <div className="grid grid-cols-1 lg:grid-cols-2">
+                                <div className="h-[40vh] lg:h-[70vh] w-full overflow-hidden">
+                                    <motion.img
+                                        src={selectedProject.image}
+                                        alt={selectedProject.title}
+                                        className="w-full h-full object-cover"
+                                        layoutId={`image-${selectedProject.id}`}
+                                    />
+                                </div>
+
+                                <div className="p-8 lg:p-12 flex flex-col justify-center text-left bg-strass-blue">
+                                    <motion.span
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.2 }}
+                                        className="text-strass-accent text-sm font-bold uppercase tracking-widest mb-4 block"
+                                    >
+                                        {selectedProject.category}
+                                    </motion.span>
+
+                                    <motion.h3
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.3 }}
+                                        className="text-3xl md:text-4xl font-bold text-white mb-6"
+                                    >
+                                        {selectedProject.title}
+                                    </motion.h3>
+
+                                    <motion.div
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: "auto" }}
+                                        transition={{ delay: 0.4 }}
+                                        className="h-1 w-20 bg-strass-accent mb-8"
+                                    />
+
+                                    <motion.p
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ delay: 0.5 }}
+                                        className="text-slate-300 text-lg leading-relaxed mb-8"
+                                    >
+                                        Projeto desenvolvido com especificações técnicas rigorosas, garantindo conformidade com normas de segurança e desempenho acústico/térmico. A Strass Glass atua desde o detalhamento até a instalação final.
+                                    </motion.p>
+
+                                    <motion.button
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.6 }}
+                                        onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank')}
+                                        className="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-[linear-gradient(110deg,#16a34a,45%,#22c55e,55%,#16a34a)] bg-[length:200%_100%] animate-shimmer-pulse text-white px-8 py-4 rounded-lg font-bold transition-all hover:shadow-green-500/30 transform hover:-translate-y-1"
+                                    >
+                                        <MessageCircle className="w-5 h-5" />
+                                        Cotar projeto similar
+                                    </motion.button>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };

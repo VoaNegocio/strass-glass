@@ -1,11 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
+import { WHATSAPP_NUMBER } from '../constants';
 
 const WhatsAppButton = () => {
     return (
         <motion.a
-            href="https://wa.me/5544999999999?text=Ol%C3%A1%2C+preciso+de+or%C3%A7amento+para+obra+comercial"
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+preciso+de+or%C3%A7amento+para+obra+comercial`}
             target="_blank"
             rel="noopener noreferrer"
             initial={{ scale: 0 }}

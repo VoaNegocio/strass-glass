@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check, MessageCircle, ArrowRight } from 'lucide-react';
+import { WHATSAPP_NUMBER } from '../constants';
 
 const Audience = () => {
     return (
@@ -30,7 +31,7 @@ const Audience = () => {
                     </div>
 
                     <button
-                        onClick={() => window.open('https://wa.me/5544999999999?text=Ol%C3%A1%2C+sou+profissional+do+setor+%28Engenheiro%2FArquiteto%29+e+gostaria+de+discutir+uma+parceria+ou+obra.', '_blank')}
+                        onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+sou+profissional+do+setor+%28Engenheiro%2FArquiteto%29+e+gostaria+de+discutir+uma+parceria+ou+obra.`, '_blank')}
                         className="group flex items-center gap-3 bg-[linear-gradient(110deg,#16a34a,45%,#22c55e,55%,#16a34a)] bg-[length:200%_100%] animate-shimmer-pulse text-white px-8 py-4 rounded-lg font-bold transition-all hover:shadow-green-500/30 transform hover:-translate-y-1"
                     >
                         <MessageCircle className="w-5 h-5" />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone, MessageCircle } from 'lucide-react';
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from '../constants';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,8 +36,8 @@ const Header = () => {
                         </a>
                     ))}
                     <button
-                        onClick={() => window.open('https://wa.me/5544999999999?text=Ol%C3%A1%2C+gostaria+de+um+or%C3%A7amento+r%C3%A1pido.', '_blank')}
-                        className="bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-full text-sm font-bold transition-all border border-white/20"
+                        onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank')}
+                        className="hidden lg:flex items-center gap-2 bg-strass-accent hover:bg-white text-strass-blue px-6 py-2.5 rounded-md font-bold transition-all duration-300 transform hover:scale-105"
                     >
                         Orçamento
                     </button>
@@ -66,8 +67,8 @@ const Header = () => {
                             </a>
                         ))}
                         <button
-                            onClick={() => window.open('https://wa.me/5544999999999?text=Ol%C3%A1%2C+gostaria+de+um+or%C3%A7amento+r%C3%A1pido.', '_blank')}
-                            className="bg-strass-accent text-white w-full py-3 rounded-lg font-bold mt-4"
+                            onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank')}
+                            className="flex items-center justify-center gap-2 bg-strass-accent text-strass-blue px-6 py-3 rounded-md font-bold hover:bg-white transition-colors"
                         >
                             Solicitar Orçamento
                         </button>
