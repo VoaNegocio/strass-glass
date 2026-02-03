@@ -5,7 +5,11 @@ const Footer = () => {
         <footer className="bg-slate-900 py-12 border-t border-slate-800">
             <div className="container mx-auto px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
                 <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">STRASS GLASS</h3>
+                    <img
+                        src="/logo/logo-strasglass-horizontal-curvas.png"
+                        alt="Strass Glass"
+                        className="h-12 w-auto brightness-0 invert mb-4 mx-auto md:mx-0"
+                    />
                     <p className="text-slate-400">Soluções em Vidros e Esquadrias Comerciais</p>
                 </div>
 

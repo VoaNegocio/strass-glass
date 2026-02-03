@@ -73,7 +73,7 @@ const ProjectGallery = () => {
     const [selectedProject, setSelectedProject] = useState(null);
 
     return (
-        <section className="py-24 bg-strass-blue relative overflow-hidden">
+        <section id="projetos" className="py-24 bg-strass-blue relative overflow-hidden">
             {/* Background Gradient */}
             <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
 

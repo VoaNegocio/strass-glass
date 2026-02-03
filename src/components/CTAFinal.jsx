@@ -9,7 +9,7 @@ const CTAFinal = () => {
     };
 
     return (
-        <section className="py-24 bg-gradient-to-t from-strass-gray/50 to-white text-center">
+        <section id="contato" className="py-24 bg-gradient-to-t from-strass-gray/50 to-white text-center">
             <div className="container mx-auto px-6 max-w-4xl">
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                     Precisa de vidros ou esquadrias para obra comercial e <span className="text-red-600">não pode correr risco</span>?

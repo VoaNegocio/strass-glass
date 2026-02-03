@@ -1,4 +1,3 @@
-```javascript
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Shield, Settings, PenTool, MessageCircle, ArrowRight } from 'lucide-react';
@@ -29,7 +28,7 @@ const Differentials = () => {
     ];
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section id="diferenciais" className="py-24 bg-white relative overflow-hidden">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -70,16 +69,15 @@ const Differentials = () => {
                 <div className="mt-16 text-center">
                     <button
                         onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank')}
-className = "inline-flex items-center gap-2 bg-strass-blue text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition-colors"
-    >
-    Agendar conversa técnica
-        < ArrowRight className = "w-5 h-5" />
-                    </button >
-                </div >
-            </div >
-        </section >
+                        className="inline-flex items-center gap-2 bg-strass-blue text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition-colors"
+                    >
+                        Agendar conversa técnica
+                        <ArrowRight className="w-5 h-5" />
+                    </button>
+                </div>
+            </div>
+        </section>
     );
 };
 
 export default Differentials;
-```
