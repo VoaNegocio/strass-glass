@@ -57,12 +57,12 @@ const Problem = () => {
                     </div>
                 </div>
 
-                <div className="bg-strass-gray border border-strass-border p-10 rounded-2xl relative shadow-lg">
-                    <div className="absolute -top-6 -left-6 text-6xl opacity-20 text-strass-blue">"</div>
-                    <h3 className="text-2xl font-semibold mb-4 text-strass-blue">
+                <div className="bg-strass-blue border border-strass-blue p-10 rounded-2xl relative shadow-lg text-white">
+                    <div className="absolute -top-6 -left-6 text-6xl opacity-20 text-white">"</div>
+                    <h3 className="text-2xl font-semibold mb-4 text-white">
                         O problema não é o vidro.
                     </h3>
-                    <p className="text-xl text-strass-alert font-bold">
+                    <p className="text-xl text-white font-bold">
                         👉 É quem não assume responsabilidade depois que instala.
                     </p>
                 </div>
