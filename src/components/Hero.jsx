@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageCircle, ArrowDown } from 'lucide-react';
+import { ArrowRight, MessageCircle } from 'lucide-react';
 import { WHATSAPP_NUMBER } from '../constants';
 
 const Hero = () => {
@@ -63,22 +63,7 @@ const Hero = () => {
 
             </div>
 
-            {/* Explore Scroll Indicator */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 0.8 }}
-                className="hidden lg:flex absolute bottom-10 left-0 w-full flex-col items-center gap-2 z-20 cursor-pointer pointer-events-none lg:pointer-events-auto"
-                onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
-            >
-                <span className="text-white/60 text-xs font-medium tracking-[0.2em] uppercase">Explore</span>
-                <motion.div
-                    animate={{ y: [0, 8, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                >
-                    <ArrowDown className="w-5 h-5 text-strass-accent" />
-                </motion.div>
-            </motion.div>
+
         </section>
     );
 };
