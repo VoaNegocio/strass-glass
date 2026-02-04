@@ -9,12 +9,11 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative w-full h-[90vh] min-h-[600px] flex items-center bg-strass-blue overflow-hidden">
-            {/* Background with Grid Pattern */}
-            <div className="absolute inset-0 opacity-40 bg-[url('/hero/img1-hero.png')] bg-cover bg-center"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-strass-blue via-strass-blue/90 to-transparent"></div>
+        <section className="relative w-full min-h-[600px] flex items-center bg-strass-blue overflow-hidden py-12 lg:py-0">
+            {/* Ambient Background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-strass-blue via-strass-blue/95 to-strass-blue/90"></div>
 
-            <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -29,7 +28,26 @@ const Hero = () => {
                         Vidros e esquadrias para <span className="text-strass-accent">obras comerciais</span> — com prazo cumprido.
                     </h1>
 
-                    <p className="text-lg text-slate-300 mb-8 max-w-xl leading-relaxed">
+
+                    {/* Hero Image */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="relative block"
+                    >
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-strass-blue/20 to-transparent z-10"></div>
+                            <img
+                                src="/hero/img1-hero.png"
+                                alt="Fachada de vidro moderna"
+                                className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                            />
+                        </div>
+                    </motion.div>
+
+
+                    <p className="text-lg text-slate-300 mt-8 mb-8 max-w-xl leading-relaxed">
                         Sem atraso no cronograma. Sem dor de cabeça no pós-obra.
                         Atendimento técnico especializado para engenheiros, construtores e arquitetos em <span className="text-white font-medium">Maringá, Sarandi, Marialva e Londrina</span>.
                     </p>
@@ -43,6 +61,8 @@ const Hero = () => {
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
                 </motion.div>
+
+
             </div>
 
             {/* Explore Scroll Indicator */}
@@ -50,7 +70,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
-                className="absolute bottom-10 left-0 w-full flex flex-col items-center gap-2 z-20 cursor-pointer"
+                className="hidden lg:flex absolute bottom-10 left-0 w-full flex-col items-center gap-2 z-20 cursor-pointer pointer-events-none lg:pointer-events-auto"
                 onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
             >
                 <span className="text-white/60 text-xs font-medium tracking-[0.2em] uppercase">Explore</span>
