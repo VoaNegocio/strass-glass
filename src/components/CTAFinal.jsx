@@ -5,6 +5,12 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from '../constants';
 
 const CTAFinal = () => {
     const handleWhatsAppClick = () => {
+        if (window.dataLayer) {
+            window.dataLayer.push({
+                event: 'conversion_click',
+                conversion_location: 'cta_final'
+            });
+        }
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank');
     };
 
@@ -20,6 +26,7 @@ const CTAFinal = () => {
                 </p>
 
                 <button
+                    id="footer-cta-button"
                     onClick={handleWhatsAppClick}
                     className="group inline-flex items-center gap-3 bg-[linear-gradient(110deg,#16a34a,45%,#22c55e,55%,#16a34a)] bg-[length:200%_100%] animate-shimmer-pulse text-white px-10 py-5 rounded-lg font-bold text-lg transition-all hover:shadow-green-500/30 transform hover:-translate-y-1"
                 >

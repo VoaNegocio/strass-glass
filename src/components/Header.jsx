@@ -36,7 +36,16 @@ const Header = () => {
                         </a>
                     ))}
                     <button
-                        onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank')}
+                        id="header-cta-desktop"
+                        onClick={() => {
+                            if (window.dataLayer) {
+                                window.dataLayer.push({
+                                    event: 'conversion_click',
+                                    conversion_location: 'header_desktop'
+                                });
+                            }
+                            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank');
+                        }}
                         className="hidden lg:flex items-center gap-2 bg-strass-accent hover:bg-white text-strass-blue px-6 py-2.5 rounded-md font-bold transition-all duration-300 transform hover:scale-105"
                     >
                         Orçamento
@@ -67,7 +76,16 @@ const Header = () => {
                             </a>
                         ))}
                         <button
-                            onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank')}
+                            id="header-cta-mobile"
+                            onClick={() => {
+                                if (window.dataLayer) {
+                                    window.dataLayer.push({
+                                        event: 'conversion_click',
+                                        conversion_location: 'header_mobile'
+                                    });
+                                }
+                                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank');
+                            }}
                             className="flex items-center justify-center gap-2 bg-strass-accent text-strass-blue px-6 py-3 rounded-md font-bold hover:bg-white transition-colors"
                         >
                             Solicitar Orçamento

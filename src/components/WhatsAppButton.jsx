@@ -8,6 +8,15 @@ const WhatsAppButton = () => {
         <motion.a
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+preciso+de+or%C3%A7amento+para+obra+comercial`}
             target="_blank"
+            id="floating-whatsapp-button"
+            onClick={() => {
+                if (window.dataLayer) {
+                    window.dataLayer.push({
+                        event: 'conversion_click',
+                        conversion_location: 'floating_button'
+                    });
+                }
+            }}
             rel="noopener noreferrer"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
