@@ -68,7 +68,15 @@ const Differentials = () => {
 
                 <div className="mt-16 text-center">
                     <button
-                        onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+preciso+de+or%C3%A7amento+para+obra+comercial`, '_blank')}
+                        onClick={() => {
+                            if (window.dataLayer) {
+                                window.dataLayer.push({
+                                    event: 'conversion_click',
+                                    conversion_location: 'differentials'
+                                });
+                            }
+                            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+preciso+de+or%C3%A7amento+para+obra+comercial`, '_blank');
+                        }}
                         className="inline-flex items-center gap-2 bg-strass-blue text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition-colors"
                     >
                         Agendar conversa técnica
