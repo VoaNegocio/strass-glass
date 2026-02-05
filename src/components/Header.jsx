@@ -44,7 +44,7 @@ const Header = () => {
                                     conversion_location: 'header_desktop'
                                 });
                             }
-                            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank');
+                            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+preciso+de+or%C3%A7amento+para+obra+comercial`, '_blank');
                         }}
                         className="hidden lg:flex items-center gap-2 bg-strass-accent hover:bg-white text-strass-blue px-6 py-2.5 rounded-md font-bold transition-all duration-300 transform hover:scale-105"
                     >
@@ -84,7 +84,7 @@ const Header = () => {
                                         conversion_location: 'header_mobile'
                                     });
                                 }
-                                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank');
+                                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+preciso+de+or%C3%A7amento+para+obra+comercial`, '_blank');
                             }}
                             className="flex items-center justify-center gap-2 bg-strass-accent text-strass-blue px-6 py-3 rounded-md font-bold hover:bg-white transition-colors"
                         >

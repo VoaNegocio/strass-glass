@@ -11,7 +11,7 @@ const Hero = () => {
                 conversion_location: 'hero'
             });
         }
-        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+um+or%C3%A7amento+para+obra+comercial.`, '_blank');
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+preciso+de+or%C3%A7amento+para+obra+comercial`, '_blank');
     };
 
     return (
