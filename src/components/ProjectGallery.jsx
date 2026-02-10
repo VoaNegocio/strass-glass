@@ -29,7 +29,7 @@ const projects = [
         id: 4,
         title: "Coberturas de Vidro",
         category: "Proteção & Estilo",
-        image: "/projects/img4-grid.jpeg",
+        image: "/projects/coberturadevidro.jpeg",
         size: "large"
     },
     {
@@ -57,7 +57,7 @@ const projects = [
         id: 8,
         title: "Peles de Vidro",
         category: "Eficiência Energética",
-        image: "/projects/img8-grid.jpeg",
+        image: "/projects/peledevidro.jpeg",
         size: "normal"
     },
     {
