@@ -11,7 +11,7 @@ const CTAFinal = () => {
                 conversion_location: 'cta_final'
             });
         }
-        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+preciso+de+or%C3%A7amento+para+obra+comercial`, '_blank');
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank');
     };
 
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { XCircle, MessageCircle, ArrowRight } from 'lucide-react';
-import { WHATSAPP_NUMBER } from '../constants';
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from '../constants';
 
 const Problem = () => {
     return (
@@ -9,7 +9,7 @@ const Problem = () => {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/problem-bg.png"
+                    src="/problem-bg.webp"
                     alt="Background"
                     className="w-full h-full object-cover opacity-30"
                 />
@@ -54,7 +54,7 @@ const Problem = () => {
                                         conversion_location: 'problem'
                                     });
                                 }
-                                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+preciso+de+or%C3%A7amento+para+obra+comercial`, '_blank');
+                                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank');
                             }}
                             className="group flex items-center gap-3 bg-[linear-gradient(110deg,#16a34a,45%,#22c55e,55%,#16a34a)] bg-[length:200%_100%] animate-shimmer-pulse text-white px-8 py-4 rounded-lg font-bold transition-all hover:shadow-green-500/30 transform hover:-translate-y-1"
                         >

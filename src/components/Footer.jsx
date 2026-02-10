@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="container mx-auto px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
                 <div>
                     <img
-                        src="/logo/logo-strasglass-horizontal-curvas.png"
+                        src="/logo/logo-strasglass-horizontal-curvas.webp"
                         alt="Strass Glass"
                         className="h-12 w-auto brightness-0 invert mb-4 mx-auto md:mx-0"
                     />

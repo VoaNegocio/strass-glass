@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, MessageCircle } from 'lucide-react';
-import { WHATSAPP_NUMBER } from '../constants';
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from '../constants';
 
 const Hero = () => {
     const handleWhatsAppClick = () => {
@@ -11,7 +11,7 @@ const Hero = () => {
                 conversion_location: 'hero'
             });
         }
-        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+preciso+de+or%C3%A7amento+para+obra+comercial`, '_blank');
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank');
     };
 
     return (
@@ -36,7 +36,7 @@ const Hero = () => {
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
                             <div className="absolute inset-0 bg-gradient-to-tr from-strass-blue/20 to-transparent z-10"></div>
                             <img
-                                src="/hero/img1-hero.png"
+                                src="/hero/img1-hero.webp"
                                 alt="Fachada de vidro moderna"
                                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                             />

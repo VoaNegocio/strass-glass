@@ -8,63 +8,63 @@ const projects = [
         id: 1,
         title: "Fachadas Comerciais",
         category: "Vidros de Alta Performance",
-        image: "/projects/img1-grid.jpeg",
+        image: "/projects/img1-grid.webp",
         size: "large"
     },
     {
         id: 2,
         title: "Interiores Corporativos",
         category: "Divisórias & Acabamentos",
-        image: "/projects/img2-grid.jpeg",
+        image: "/projects/img2-grid.webp",
         size: "normal"
     },
     {
         id: 3,
         title: "Engenharia de Detalhe",
         category: "Esquadrias de Precisão",
-        image: "/projects/img3-grid.jpeg",
+        image: "/projects/img3-grid.webp",
         size: "normal"
     },
     {
         id: 4,
         title: "Coberturas de Vidro",
         category: "Proteção & Estilo",
-        image: "/projects/coberturadevidro.jpeg",
+        image: "/projects/coberturadevidro.webp",
         size: "large"
     },
     {
         id: 5,
         title: "Lobbies Corporativos",
         category: "Acústica & Privacidade",
-        image: "/projects/img5-grid.jpeg",
+        image: "/projects/img5-grid.webp",
         size: "normal"
     },
     {
         id: 6,
         title: "Vãos Livres",
         category: "Grandes Formatos",
-        image: "/projects/img6-grid.jpeg",
+        image: "/projects/img6-grid.webp",
         size: "normal"
     },
     {
         id: 7,
         title: "Guarda-Corpos",
         category: "Segurança Certificada",
-        image: "/projects/img7-grid.jpeg",
+        image: "/projects/img7-grid.webp",
         size: "normal"
     },
     {
         id: 8,
         title: "Peles de Vidro",
         category: "Eficiência Energética",
-        image: "/projects/peledevidro.jpeg",
+        image: "/projects/peledevidro.webp",
         size: "normal"
     },
     {
         id: 9,
         title: "Fachadas em Vidro",
         category: "Profundidade e Design",
-        image: "/projects/img9-grid.jpeg",
+        image: "/projects/img9-grid.webp",
         size: "large"
     }
 ];
@@ -134,7 +134,7 @@ const ProjectGallery = () => {
                                     conversion_location: 'project_gallery_list'
                                 });
                             }
-                            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+preciso+de+or%C3%A7amento+para+obra+comercial`, '_blank');
+                            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank');
                         }}
                         className="group inline-flex items-center gap-3 bg-[linear-gradient(110deg,#16a34a,45%,#22c55e,55%,#16a34a)] bg-[length:200%_100%] animate-shimmer-pulse text-white px-8 py-4 rounded-lg font-bold transition-all hover:shadow-green-500/30 transform hover:-translate-y-1"
                     >
@@ -223,7 +223,7 @@ const ProjectGallery = () => {
                                                     conversion_location: 'project_gallery_modal'
                                                 });
                                             }
-                                            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1%2C+preciso+de+or%C3%A7amento+para+obra+comercial`, '_blank');
+                                            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, '_blank');
                                         }}
                                         className="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-[linear-gradient(110deg,#16a34a,45%,#22c55e,55%,#16a34a)] bg-[length:200%_100%] animate-shimmer-pulse text-white px-8 py-4 rounded-lg font-bold transition-all hover:shadow-green-500/30 transform hover:-translate-y-1"
                                     >

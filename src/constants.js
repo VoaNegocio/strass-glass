@@ -1,2 +1,2 @@
-export const WHATSAPP_NUMBER = '554384038861';
-export const WHATSAPP_MESSAGE = "Olá! Vim pelo Google e gostaria de um orçamento.";
+export const WHATSAPP_NUMBER = '5528999491901';
+export const WHATSAPP_MESSAGE = "Olá! Vim pelo anúncio e gostaria de mais informações sobre energia solar";
