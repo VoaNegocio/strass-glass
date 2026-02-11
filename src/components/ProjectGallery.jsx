@@ -34,9 +34,9 @@ const projects = [
     },
     {
         id: 5,
-        title: "Lobbies Corporativos",
+        title: "Fachadas em ACM",
         category: "Acústica & Privacidade",
-        image: "/projects/img5-grid.webp",
+        image: "/projects/img7-grid.webp",
         size: "normal"
     },
     {
@@ -50,7 +50,7 @@ const projects = [
         id: 7,
         title: "Guarda-Corpos",
         category: "Segurança Certificada",
-        image: "/projects/img7-grid.webp",
+        image: "/projects/img5-grid.webp",
         size: "normal"
     },
     {
