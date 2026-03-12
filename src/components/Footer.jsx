@@ -15,7 +15,7 @@ const Footer = () => {
 
                 <div className="text-sm text-slate-500 text-center md:text-right">
                     <p>© {new Date().getFullYear()} Strass Glass. Todos os direitos reservados.</p>
-                    <p className="mt-1">Maringá • Sarandi • Marialva • Londrina</p>
+                    <p className="mt-1">Londrina</p>
                 </div>
             </div>
         </footer>
