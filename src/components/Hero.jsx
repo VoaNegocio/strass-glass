@@ -44,7 +44,7 @@ const Hero = () => {
                     </motion.div>
 
                     <div className="inline-block px-4 py-1.5 mb-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
-                        <span className="text-strass-accent text-sm font-semibold tracking-wider uppercase">Engenharia de Esquadrias</span>
+                        <span className="text-strass-accent text-sm font-semibold tracking-wider uppercase">Esquadrias de Alumínio</span>
                     </div>
 
                     <h1 className="text-4xl lg:text-5xl/tight font-bold text-white mb-6">
@@ -63,7 +63,7 @@ const Hero = () => {
 
                     <p className="text-lg text-slate-300 max-w-xl leading-relaxed">
                         Sem atraso no cronograma. Sem dor de cabeça no pós-obra.
-                        Atendimento técnico especializado para engenheiros, construtores e arquitetos em <span className="text-white font-medium">Maringá, Sarandi, Marialva e Londrina</span>.
+                        Atendimento técnico especializado para engenheiros, construtores e arquitetos em <span className="text-white font-medium">Londrina</span>.
                     </p>
                 </motion.div>
 
